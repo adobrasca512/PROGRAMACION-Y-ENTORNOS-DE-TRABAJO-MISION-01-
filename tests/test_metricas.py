@@ -1,5 +1,5 @@
 import unittest
-from src.metricas import contar_aciertos
+from src.metricas import contar_aciertos, calcular_precision
 
 
 class TestMetricas(unittest.TestCase):
@@ -10,6 +10,8 @@ class TestMetricas(unittest.TestCase):
         with self.assertRaises(ValueError):
             contar_aciertos([1], [1, 0])
 
-
+    def test_rechaza_listas_vacias(self):
+        with self.assertRaises(ValueError):
+            calcular_precision([], [])
 if __name__ == "__main__":
     unittest.main()
