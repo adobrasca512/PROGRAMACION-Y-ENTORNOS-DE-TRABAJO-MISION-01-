@@ -10,6 +10,13 @@ class TestMetricas(unittest.TestCase):
         with self.assertRaises(ValueError):
             contar_aciertos([1], [1, 0])
 
+    def test_calcula_precision(self):
+        self.assertAlmostEqual(calcular_precision([1, 0, 1], [1, 1, 1]), 2/3)
+
+    def test_rechaza_longitudes_distintas_precision(self):
+        with self.assertRaises(ValueError):
+            calcular_precision([1], [1, 0])
+
     def test_rechaza_listas_vacias(self):
         with self.assertRaises(ValueError):
             calcular_precision([], [])
