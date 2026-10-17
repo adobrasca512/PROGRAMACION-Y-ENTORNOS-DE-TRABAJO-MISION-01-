@@ -24,7 +24,7 @@ python -m unittest discover -s tests -v
 ## Estructura
 
 - `src/predictor.py`: entrenamiento mínimo y predicción.
-- `src/metricas.py`: funciones auxiliares para ampliar.
+- `src/metricas.py`: funciones auxiliares para ampliar. Aqui se añadio la funcion: calcular_precision que se encarga de calcular el porcentaje de predicciones que acierta el modelo. Con el calculo de aciertos/total. En la funcion llama a contar_aciertos y el valor retornado se le calcula la precisión con la formula mencionada anteriormente.
 - `tests/`: pruebas de partida.
 
 ## Colaboración
