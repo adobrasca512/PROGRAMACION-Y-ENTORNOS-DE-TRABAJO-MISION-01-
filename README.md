@@ -29,6 +29,6 @@ python -m unittest discover -s tests -v
 
 ## Colaboración
 
-Usad ramas `feature/*`, Pull Requests y revisiones de compañeros
+## Usad ramas `feature/*`, Pull Requests y revisiones de compañeros
 
 cambio para PR2
